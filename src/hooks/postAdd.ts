@@ -20,7 +20,7 @@ export function isTypescript(file: string) {
   return path.parse(file).ext === '.ts';
 }
 
-export function postAdd(rootDir: string) {
+export function postAdd(rootDir: string, ...args: unknown[]) {
   const hookPath = getHookPath(rootDir, HOOK_NAMES.postAdd);
 
   if (!hookPath) {
@@ -29,7 +29,7 @@ export function postAdd(rootDir: string) {
 
   const { dir, file } = hookPath;
 
-  runScript(path.resolve(dir, path.parse(file).name), isTypescript(file));
+  runScript(path.resolve(dir, path.parse(file).name), isTypescript(file), ...args);
 }
 
 export default postAdd;
