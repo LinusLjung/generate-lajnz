@@ -1,11 +1,17 @@
 # @linusljung/generate-lajnz
 
+## 0.0.7
+
+### Patch Changes
+
+- 499a846: Fixes issue with post-script execution for JS files
+
 ## 0.0.6
 
 ### Patch Changes
 
 - f81104e: - Fixes folder generation issue
-- 0c6fdc2: - Fixes crash if __HOOKS__ folder does not exist
+- 0c6fdc2: - Fixes crash if **HOOKS** folder does not exist
 
 ## 0.0.5
 
