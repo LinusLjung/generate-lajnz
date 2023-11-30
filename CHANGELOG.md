@@ -1,5 +1,11 @@
 # @linusljung/generate-lajnz
 
+## 0.0.5
+
+### Patch Changes
+
+- 809df52: Fixes issue where number only input was converted to number type
+
 ## 0.0.4
 
 ### Patch Changes
