@@ -1,5 +1,11 @@
 # @linusljung/generate-lajnz
 
+## 0.0.4
+
+### Patch Changes
+
+- df8114e: Fix issues with running add"
+
 ## 0.0.3
 
 ### Patch Changes
