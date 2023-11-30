@@ -1,14 +1,17 @@
 import { spawn } from 'child_process';
 
 function runScript(file: string, isTs: boolean, ...args: unknown[]) {
-  const processName = isTs ? 'ts-node' : 'node';
   const imports = isTs ? `import script from '${file}'` : `const script = require('${file}');`;
   const code = `
     ${imports}
     script(...${JSON.stringify(args)});
   `;
 
-  const child = spawn('npx', [processName, '-e', code], {
+  const spawnArgs: [string, string[]] = isTs ? ['npx', ['ts-node']] : ['node', []];
+
+  spawnArgs[1].push('-e', code);
+
+  const child = spawn(...spawnArgs, {
     stdio: 'inherit',
   });
 
