@@ -6,7 +6,9 @@ export type ArgsType = PromptType;
 export function getArgs(): ArgsType {
   const {
     _: [action, type, name],
-  } = minimist(process.argv.slice(2));
+  } = minimist(process.argv.slice(2), {
+    string: '_'
+  });
 
   return {
     action: action as ActionType,
