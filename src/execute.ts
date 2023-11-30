@@ -70,7 +70,7 @@ async function execute(config: RcType, env: LiftoffEnv) {
     await add(path.join(configBase, '.glz', type), rootDir, variableValues);
 
     if (env.configBase) {
-      postAdd(env.configBase);
+      postAdd(env.configBase, type, variableValues);
     }
   }
 }
