@@ -1,5 +1,12 @@
 # @linusljung/generate-lajnz
 
+## 0.0.6
+
+### Patch Changes
+
+- f81104e: - Fixes folder generation issue
+- 0c6fdc2: - Fixes crash if __HOOKS__ folder does not exist
+
 ## 0.0.5
 
 ### Patch Changes
