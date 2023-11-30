@@ -1,0 +1,15 @@
+{
+  "types": {
+    "package": {
+      "rootDir": "src/packages",
+      "variables": [
+        "name2",
+        "name3",
+        "name4"
+      ]
+    },
+    "service": {
+      "rootDir": "test-src/packages"
+    }
+  }
+}
