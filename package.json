@@ -12,7 +12,7 @@
     "release": "npm run build && npm run changeset:publish"
   },
   "bin": {
-    "glz": "./dist/index.js"
+    "glz": "dist/index.js"
   },
   "author": "",
   "license": "ISC",
