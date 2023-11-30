@@ -8,7 +8,7 @@
     "clean": "rimraf dist",
     "test": "jest",
     "changeset": "changeset",
-    "publish": "changeset publish",
+    "changeset:publish": "changeset publish",
     "release": "npm run build && npm run changeset:publish"
   },
   "bin": {
