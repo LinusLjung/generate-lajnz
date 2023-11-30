@@ -5,9 +5,15 @@ import runScript from './utils/runScript';
 
 export function getHookPath(rootDir: string, name: typeof HOOK_NAMES[keyof typeof HOOK_NAMES]) {
   const hooksDir = path.join(rootDir, FOLDER_NAME, HOOKS_FOLDER_NAME);
-  const hooks = fs.readdirSync(hooksDir);
+  const hook = (() => {
+    try {
+      const hooks = fs.readdirSync(hooksDir);
 
-  const hook = hooks.find((hook) => path.parse(hook).name === name);
+      return hooks.find((hook) => path.parse(hook).name === name);
+    } catch (e) {
+      return null;
+    }
+  })();
 
   if (!hook) {
     return null;
