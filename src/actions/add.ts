@@ -127,6 +127,8 @@ async function targetExists(target: string) {
 }
 
 async function add(filesDir: string, targetDir: string, variables: { name: string } & Record<string, string>) {
+  targetDir = path.join(targetDir, variables.name);
+
   const exists = await targetExists(targetDir);
 
   if (exists) {
