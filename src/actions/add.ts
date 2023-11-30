@@ -139,7 +139,7 @@ async function add(filesDir: string, targetDir: string, variables: { name: strin
   let files = await getFiles(tmpDir);
   files = await compileFiles(files, variables);
   await renameFiles(files, variables);
-  await copyToProject(tmpDir, path.join(targetDir, variables.name));
+  await copyToProject(tmpDir, path.join(targetDir));
 }
 
 export default add;

@@ -1,7 +1,7 @@
 {
   "types": {
     "package": {
-      "rootDir": "src/packages",
+      "rootDir": "playground/packages",
       "variables": [
         "name2",
         "name3",
@@ -9,7 +9,7 @@
       ]
     },
     "service": {
-      "rootDir": "test-src/packages"
+      "rootDir": "playground/services"
     }
   }
 }
